@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="images/tic-tac-toe.png">
+
+</head>
+
+<body>
+    <div class="container text-center d-flex flex-column justify-content-center align-items-center">
+        <h1 class="display-3 mb-2">Tic Tac Toe</h1>
+        
+        <div class="overlay hide">
+            <p></p>
+        </div>
+        <div class="controls my-3 d-flex justify-content-between">
+            <div class="dropdown  d-inline-block">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Select Level
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Easy</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Medium</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Hard</a></li>
+                </ul>
+            </div>
+            <button type="button" class="restart btn btn-outline-success">Restart</button>
+        </div>
+
+        <div class="board">
+            <div class="row" data="0">
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="0">
+                    <p></p>
+                </div>
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="1">
+                    <p></p>
+                </div>
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="2">
+                    <p></p>
+                </div>
+            </div>
+            <div class="row" data="1">
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="0">
+                    <p></p>
+                </div>
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="1">
+                    <p></p>
+                </div>
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="2">
+                    <p></p>
+                </div>
+            </div>
+            <div class="row" data="2">
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="0">
+                    <p></p>
+                </div>
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="1">
+                    <p></p>
+                </div>
+                <div class="col border border-2 d-flex justify-content-center align-items-center fs-1" data="2">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted mt-5">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            Tic Tac Toe by
+            <a class="text-reset fw-bold" href="https://github.com/KartikSinghK" target="_blank">Kartik Singh</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
