@@ -1,6 +1,16 @@
 :root {
-	--width: 600px;
-	--height: 200px;
+	--width: 300px;
+	--height: 100px;
+}
+body, html{
+	margin:0;
+	height:100vh;
+}
+.container{
+	height:85%;
+}
+footer{
+	height:15%;
 }
 .row {
 	width: var(--width);
@@ -30,8 +40,12 @@
 	cursor: pointer; /* Add a pointer on hover */
     color:white;
     font-size:3rem;
-
 }
 .hide{
     display:none;
+}
+footer{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }

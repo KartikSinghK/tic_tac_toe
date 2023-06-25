@@ -91,8 +91,8 @@ const playMove = ({ target }) => {
 		position[i][j] = game.opponent.playerMove;
 		tile.innerText = game.opponent.playerMove;
 		game.movesLeft--;
+		game.board.removeEventListener("click", playMove);
 		if (checkResult(game.opponent)) {
-			game.board.removeEventListener("click", playMove);
 			game.showResult("You");
 			return;
 		} else {
@@ -102,17 +102,20 @@ const playMove = ({ target }) => {
 			}
 		}
 		// AI move
-		playBestMove(position);
-		game.movesLeft--;
-		if (checkResult(game.AI)) {
-			game.board.removeEventListener("click", playMove);
-			game.showResult("AI");
-		} else {
-			if (game.movesLeft === 0) {
-				console.log("draw");
-				game.showResult();
+		setTimeout(() => {
+			playBestMove(position);
+			game.movesLeft--;
+			if (checkResult(game.AI)) {
+				game.board.removeEventListener("click", playMove);
+				game.showResult("AI");
+			} else {
+				if (game.movesLeft === 0) {
+					console.log("draw");
+					game.showResult();
+				}
 			}
-		}
+			game.board.addEventListener("click", playMove);
+		}, 800);
 	}
 };
 
